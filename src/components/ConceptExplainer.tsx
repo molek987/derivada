@@ -76,7 +76,7 @@ export default function ConceptExplainer() {
               La derivada como razón de cambio instantánea
             </h3>
             <p>
-              En cálculo, la derivada de una función $f(t)$ en el instante $t$ representa la{' '}
+              En cálculo, la derivada de una función &quot;f(t)&quot; en el instante &quot;t&quot; representa la{' '}
               <strong>tasa de cambio instantánea</strong> con la que cambia la variable dependiente respecto a la independiente (el tiempo).
             </p>
 
@@ -88,7 +88,7 @@ export default function ConceptExplainer() {
                 V&apos;(t) = <span className="text-blue-600">dV/dt</span> = lim<sub>Δt → 0</sub> [V(t + Δt) - V(t)] / Δt
               </span>
               <span className="text-xs text-slate-500 mt-2">
-                Geométricamente: representa la <strong>pendiente de la recta tangente</strong> a la curva de Voltaje $V(t)$ en cualquier instante.
+                Geométricamente: representa la <strong>pendiente de la recta tangente</strong> a la curva de Voltaje &quot;V(t)&quot; en cualquier instante.
               </span>
             </div>
 
@@ -124,7 +124,7 @@ export default function ConceptExplainer() {
             </div>
 
             <p>
-              Esto significa que el capacitor es un <strong>bloque derivador físico</strong>. No reacciona al valor absoluto del voltaje, sino a la velocidad con la que este cambia. Si el voltaje no cambia ($dV/dt = 0$), no pasa corriente, sirviendo como un &quot;circuito abierto&quot; para corriente directa (C.D.).
+              Esto significa que el capacitor es un <strong>bloque derivador físico</strong>. No reacciona al valor absoluto del voltaje, sino a la velocidad con la que este cambia. Si el voltaje no cambia (&quot;dV/dt = 0&quot;), no pasa corriente, sirviendo como un &quot;circuito abierto&quot; para corriente directa (C.D.).
             </p>
           </div>
         )}

@@ -56,9 +56,12 @@ export default function App() {
               <Zap size={24} className="fill-blue-100 text-blue-900 animate-pulse" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
                   Cálculo I • Aplicaciones de la Derivada
+                </span>
+                <span className="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full font-semibold uppercase tracking-wider">
+                  Grupo VI, Módulo IV: Competencias Docentes • 24-Jun-2026
                 </span>
               </div>
               <h1 className="text-xl md:text-2xl font-black tracking-tight mt-0.5">
@@ -83,6 +86,9 @@ export default function App() {
 
       {/* MAIN CONTAINER */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 flex flex-col gap-6" id="app-main-content">
+        
+        {/* CONCEPT EXPLAINER CHAPTERS */}
+        <ConceptExplainer />
         
         {/* TOP DESCRIPTION HERO */}
         <section className="bg-gradient-to-r from-blue-50 to-indigo-50/50 rounded-2xl border border-blue-100 p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-xs" id="intro-hero">
@@ -128,6 +134,13 @@ export default function App() {
           {/* RIGHT 1/3 COLUMN: CONTROLS, SCHEMATIC & PARAMETERS */}
           <section className="flex flex-col gap-6" id="sidebar-controls">
             
+            {/* PANEL 2: CIRCUIT MODEL SCHEMATIC WITH LIVE VARIABLE METRICS */}
+            <CircuitSchematic
+              voltage={currentPoint.voltage}
+              current={currentPoint.current}
+              capacitance={capacitance}
+            />
+
             {/* PANEL 1: PRESET WAVEFORM SELECTOR */}
             <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col gap-4" id="waveforms-selector">
               <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
@@ -263,13 +276,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* PANEL 2: CIRCUIT MODEL SCHEMATIC WITH LIVE VARIABLE METRICS */}
-            <CircuitSchematic
-              voltage={currentPoint.voltage}
-              current={currentPoint.current}
-              capacitance={capacitance}
-            />
-
             {/* PANEL 3: CONSTANT MULTIPLIER CONTROLLER (CAPACITANCE SLIDER) */}
             <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col gap-4" id="capacitance-slider-panel">
               <div className="flex justify-between items-center">
@@ -308,15 +314,10 @@ export default function App() {
           </section>
         </div>
 
-        {/* BOTTOM SECTION: THEORY LESSONS & QUIZ CHALLENGE */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6" id="theoretical-and-quiz-grid">
-          
-          {/* CONCEPT EXPLAINER CHAPTERS */}
-          <ConceptExplainer />
-
+        {/* BOTTOM SECTION: QUIZ CHALLENGE */}
+        <div id="quiz-challenge-container">
           {/* INTERACTIVE CHALLENGE QUIZ PANEL */}
           <ChallengePanel />
-
         </div>
 
       </main>
